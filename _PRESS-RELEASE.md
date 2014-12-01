@@ -17,10 +17,10 @@ Once the project moves into development, the press release can be used as a touc
 # Price Follower #
  
 ## Heading ##
-  > 
+  > Price Follower tracks the history of the event you want to attend and tells you if it is the right time to buy the item. It will also suggest when is the right time to buy.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > This app is useful to everyone that likes to attend events.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
@@ -35,10 +35,10 @@ Once the project moves into development, the press release can be used as a touc
   > "This product will change the way we see ticket prices... forever"
 
 ## How to Get Started ##
-  > All you have to do is search the name 
+  > All you have to do is search the type of event and it will tell you when it is the appropriate time to buy the ticket.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "I use Price Follower and I saved $254 this year in tickets. How amazing!!!"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
