@@ -1,4 +1,3 @@
-# Project Name #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -15,9 +14,10 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
+# Price Follower #
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > 
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
@@ -26,16 +26,16 @@ Once the project moves into development, the press release can be used as a touc
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Consumers buy tickets for an event within a wide range of time before the event starts, but they are not getting the best price for that ticket.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Price Follower will allow ticket consumers to find the best time to buy a ticket by tracking the average price for an event.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "This product will change the way we see ticket prices... forever"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > All you have to do is search the name 
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
