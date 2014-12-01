@@ -14,31 +14,28 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
-# Price Follower #
+# WaitTime #
  
 ## Heading ##
-  > Price Follower tracks the history of the event you want to attend and tells you if it is the right time to buy the item. It will also suggest when is the right time to buy.
+  > Wait time tells the user the amount of time a person would have to wait at a restaurant before being seated.
 
 ## Sub-Heading ##
-  > This app is useful to everyone that likes to attend events.
+  > This app would be useful to both companies and restaurant goers.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > WaitTime will provide the wait time for a restaurant and will avoid the user from calling the restaurant to check. This app will also help restaurants with low traffic advertise their small wait time in an effort to get more customers.
 
 ## Problem ##
-  > Consumers buy tickets for an event within a wide range of time before the event starts, but they are not getting the best price for that ticket.
+  > It is a big inconvenience for a person to go to a restaurant to find out that they have to wait an hour or more before being seated.
 
 ## Solution ##
-  > Price Follower will allow ticket consumers to find the best time to buy a ticket by tracking the average price for an event.
-
-## Quote from You ##
-  > "This product will change the way we see ticket prices... forever"
+  > WaitTime tells the user the time for a specified restaurant or the times of the restaurants nearby. In a way, this will divert the traffic to some restaurants that are usually busy to other restaurants that have significantly less traffic.
 
 ## How to Get Started ##
-  > All you have to do is search the type of event and it will tell you when it is the appropriate time to buy the ticket.
+  > There are two ways to use this app. One way is to type in the type of food you would like and WaitTime will give you a list of restaurants within a specified proximity and their wait time. The other way is to type in the restaurant you want to go to and WaitTime will retrieve the expected amount of time you would have to wait.
 
 ## Customer Quote ##
-  > "I use Price Follower and I saved $254 this year in tickets. How amazing!!!"
+  > "This app helped me save so much time when going out. I no longer have to go through the disappointment of finding out that I have to wait a long period of time to get seated."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Go visit WaitTime.com and sign up today!
