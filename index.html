@@ -7,51 +7,63 @@
     <link type="text/css" rel="stylesheet" href="styles.css"/>
   </head>
   <body ng-app="main">
-    <h1 class="text-center">San Francisco Murals</h1>
+    <div class="row">
+      <header class="col-md-4" align="middle"><h1>San Francisco Murals</h1></header>
+    </div>
     <div ng-controller="MuralController as muralCtrl">
       <div ng-controller="ImageController as imagesCtrl">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4">
-              <button ng-click="imagesCtrl.selectImage(0)"> 1 </button>
-              <button ng-click="imagesCtrl.selectImage(1)"> 2 </button>
-              <button ng-click="imagesCtrl.selectImage(2)"> 3 </button>
+            <div class="col-md-4" align="middle">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(0)" ng-src="{{muralCtrl.mural[0].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(1)" ng-src="{{muralCtrl.mural[1].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(2)" ng-src="{{muralCtrl.mural[2].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(3)" ng-src="{{muralCtrl.mural[3].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(4)" ng-src="{{muralCtrl.mural[4].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(5)" ng-src="{{muralCtrl.mural[5].imageUrl}}">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-8">
               <img class="MuralImages" ng-src="{{muralCtrl.mural[imagesCtrl.image].imageUrl}}">
+              <div class="AboutImage">
+                <div>{{muralCtrl.mural[imagesCtrl.image].name}}</div>
+                <div>By: {{muralCtrl.mural[imagesCtrl.image].artist}}</div>
+                <div>Location: {{muralCtrl.mural[imagesCtrl.image].location}}</div>
+              </div>
             </div>
-            <div class="col-md-4">
-              <div>{{muralCtrl.mural[imagesCtrl.image].name}}</div>
-              <div>By: {{muralCtrl.mural[imagesCtrl.image].artist}}</div>
-              <div>Location: {{muralCtrl.mural[imagesCtrl.image].location}}</div>
+            <!-- <div class="col-md-4">
+            </div> -->
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-md-offset-4">
+              <div ng-repeat="review in muralCtrl.mural[imagesCtrl.image].reviews">
+                {{review.author}}
+                <strong>{{review.rating}}</strong>
+                <div>{{review.comment}}</div>
+              </div>
             </div>
-            <div ng-repeat="review in muralCtrl.mural[imagesCtrl.image].reviews">
-              {{review.author}}
-              <strong>{{review.rating}}</strong>
-              <div>{{review.comment}}</div>
+            <div class="col-md-2">
+              <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(muralCtrl.mural[imagesCtrl.image])">
+                <div class="ReviewComments">
+                  <div>{{reviewCtrl.review.author}} <strong>{{reviewCtrl.review.rating}}</strong> </div>
+                  {{reviewCtrl.review.comment}}
+                </div>
+                <h4>Submit a Review</h4>
+                <fieldset class="form-group">
+                  <input ng-model="reviewCtrl.review.author" class="form-control" placeholder="Name"/>
+                  <select ng-model="reviewCtrl.review.rating" class="form-control" ng-options="stars for stars in [5,4,3,2,1]">
+                    <option value>Rating</option>
+                  </select>
+                </fieldset>
+                <!-- <fieldset class="form-group">
+                </fieldset> -->
+                <fieldset class="form-group">
+                  <textarea ng-model="reviewCtrl.review.comment" class="form-control" placeholder="Product review"></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                  <input type="submit" value="Submit Review"/>
+                </fieldset>
+              </form>
             </div>
-            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(muralCtrl.mural[imagesCtrl.image])">
-              <blockquote >
-                <strong>{{reviewCtrl.review.rating}} Stars</strong>
-                {{reviewCtrl.review.comment}}
-                <div>-{{reviewCtrl.review.author}}</div>
-              </blockquote>
-              <h4>Submit a Review</h4>
-              <fieldset class="form-group">
-                <input ng-model="reviewCtrl.review.author" placeholder="Name"/>
-              </fieldset>
-              <fieldset class="form-group">
-                <select ng-model="reviewCtrl.review.rating" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
-                  <option value>Rate the Product</option>
-                </select>
-              </fieldset>
-              <fieldset class="form-group">
-                <textarea ng-model="reviewCtrl.review.comment" placeholder="Product review"></textarea>
-              </fieldset>
-              <fieldset class="form-group">
-                <input type="submit" value="Submit Review"/>
-              </fieldset>
-            </form>
           </div>
         </div>
       </div>

@@ -1,7 +1,38 @@
 body {
 	background-image: url(./grey-background.jpg)
 }
+
+header {
+	-webkit-text-stroke: 0.5px white;
+}
+
+.ImageButtons {
+	width: 80px;
+	height: 80px;
+	border: 3px solid white;
+	margin: 5px 5px 5px 5px;
+}
+
 .MuralImages {
-	width: 50%;
-	height: 60%;
+	max-width: 60%;
+	max-height: 60%;
+	float:left;
+}
+
+.col-md-8 {
+	padding: 0px 0px 0px 0px;
+}
+
+.AboutImage {
+	float: left;
+}
+
+.AboutImage > div {
+	font-size: 1.5em;
+	margin-left: 50px;
+	margin-bottom: 5px;
+}
+
+.ReviewComments {
+	font-size: 150%;
 }
