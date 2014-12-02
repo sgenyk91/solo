@@ -1,0 +1,14 @@
+<doctype! html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="main" ng-controller="RestaurantController as restCtrl">
+        <div ng-repeat="bla in restCtrl.restaurant">
+          <h3> {{bla.name}} </h3>
+        </div>
+    </div>
+</body>
+</html>
