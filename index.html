@@ -21,6 +21,7 @@
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(3)" ng-src="{{muralCtrl.mural[3].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(4)" ng-src="{{muralCtrl.mural[4].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(5)" ng-src="{{muralCtrl.mural[5].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(6)" ng-src="{{muralCtrl.mural[6].imageUrl}}">
             </div>
             <div class="col-md-8">
               <img class="MuralImages" ng-src="{{muralCtrl.mural[imagesCtrl.image].imageUrl}}">
@@ -35,16 +36,22 @@
           </div>
           <div class="row">
             <div class="col-md-3 col-md-offset-4">
-              <div ng-repeat="review in muralCtrl.mural[imagesCtrl.image].reviews">
-                {{review.author}}
-                <strong>{{review.rating}}</strong>
+              <h4>Reviews</h4>
+              <div class="CommentList" ng-repeat="review in muralCtrl.mural[imagesCtrl.image].reviews">
+                <div class="AuthorRating">
+                  {{review.author}}
+                  <strong>{{review.rating}}</strong>
+                </div>
                 <div>{{review.comment}}</div>
               </div>
             </div>
             <div class="col-md-2">
               <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(muralCtrl.mural[imagesCtrl.image])">
                 <div class="ReviewComments">
-                  <div>{{reviewCtrl.review.author}} <strong>{{reviewCtrl.review.rating}}</strong> </div>
+                  <div>
+                    {{reviewCtrl.review.author}} 
+                    <strong>{{reviewCtrl.review.rating}}</strong>
+                  </div>
                   {{reviewCtrl.review.comment}}
                 </div>
                 <h4>Submit a Review</h4>

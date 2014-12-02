@@ -1,16 +1,19 @@
 body {
 	background-image: url(./grey-background.jpg)
 }
-
-header {
-	-webkit-text-stroke: 0.5px white;
+* {
+	font-family: Georgia;
 }
+/*header {
+	-webkit-text-stroke: 0.5px white;
+}*/
 
 .ImageButtons {
 	width: 80px;
 	height: 80px;
-	border: 3px solid white;
+	border: 3px solid #82CAFF;
 	margin: 5px 5px 5px 5px;
+	cursor: pointer;
 }
 
 .MuralImages {
@@ -27,12 +30,28 @@ header {
 	float: left;
 }
 
+h1, h4 {
+	color: #82CAFF;
+}
+
 .AboutImage > div {
 	font-size: 1.5em;
+	color: #82CAFF;
 	margin-left: 50px;
 	margin-bottom: 5px;
 }
 
+.CommentList {
+	margin-top: 10px;
+	background-color: #CDCDCD;
+	border: 3px solid #595959;
+	border-radius: 5px;
+}
+
+.AuthorRating {
+	font-size: 120%;
+}
+
 .ReviewComments {
-	font-size: 150%;
+	font-size: 120%;
 }

@@ -18,8 +18,9 @@ app.controller("ReviewController", function() {
 	this.review = {};
 	this.addReview = function(mural) {
 		console.log("mural", mural);
-
-		mural.reviews.push(this.review);
+		if (this.review.author && this.review.comment && this.review.rating) {
+			mural.reviews.push(this.review);
+		}
 		this.review = {};
 	}
 });
@@ -77,6 +78,13 @@ var muralList = [{
 		artist: "Precita Eyes",
 		location: "21st and Shotwell",
 		imageUrl: "http://www.sfmuralarts.com/pics/1662.jpg",
+		reviews: [{
+	}]
+	}, {
+		name: "Koi",
+		artist: "Marina Perez-Wong and Elaine Chu",
+		location: "24th and Potrero St",
+		imageUrl: "http://www.sfmuralarts.com/pics/1654.jpg",
 		reviews: [{
 	}]
 	
