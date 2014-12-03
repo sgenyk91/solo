@@ -27,14 +27,17 @@ app.controller("ReviewController", function() {
 
 app.controller("AddImageController", function() {
 	this.show = false;
-	this.addedImage = {};
+	this.addedImage = {reviews: []};
 	this.showForm = function() {
 		this.show = !this.show;
 	}
-	// this.addImage = function(mural) {
-	// 	console.log("addImage triggered");
-	// 	mural.push(this.addedImage);
-	// }
+	this.addImage = function(mural) {
+		console.log("addImage triggered", this.addedImage);
+		console.log("mural", mural);
+		mural.push(this.addedImage);
+		this.addedImage = {};
+
+	}
 });
 
 var muralList = [{
@@ -99,5 +102,4 @@ var muralList = [{
 		imageUrl: "http://www.sfmuralarts.com/pics/1654.jpg",
 		reviews: [{
 	}]
-	
 }];

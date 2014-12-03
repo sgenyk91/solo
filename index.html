@@ -25,13 +25,13 @@
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(5)" ng-src="{{muralCtrl.mural[5].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(6)" ng-src="{{muralCtrl.mural[6].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(7)" ng-src="{{muralCtrl.mural[7].imageUrl}}">
-              <form name="imageForm" ng-controller="AddImageController as addCtrl" class="form-group" id="addImageButton" ng-submit="addCtrl.addImage()">
-                <button class="btn btn-info" ng-click="addCtrl.showForm()">Add Image <span class="glyphicon glyphicon-collapse-down"></span></button>
+              <form name="imageForm" ng-controller="AddImageController as addCtrl" class="form-group" id="addImageButton" ng-submit="addCtrl.addImage(muralCtrl.mural)">
+                <button type="button" class="btn btn-info" ng-click="addCtrl.showForm()">Add Image <span class="glyphicon glyphicon-collapse-down"></span></button>
                 <div ng-show="addCtrl.show">
-                  <input class="AddImage" placeholder="Name of Mural">
-                  <input class="AddImage" placeholder="Artist Name">
-                  <input class="AddImage" placeholder="Location">
-                  <input class="AddImage" placeholder="Add Image Url">
+                  <input ng-model="addCtrl.addedImage.name" class="AddImage" placeholder="Name of Mural">
+                  <input ng-model="addCtrl.addedImage.artist" class="AddImage" placeholder="Artist Name">
+                  <input ng-model="addCtrl.addedImage.location" class="AddImage" placeholder="Location">
+                  <input ng-model="addCtrl.addedImage.imageUrl" class="AddImage" placeholder="Add Image Url">
                   <button type="submit" class="btn btn-info AddImage">Submit <span class="glyphicon glyphicon-ok"></button>
                 </div>
               </form>
