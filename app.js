@@ -25,6 +25,18 @@ app.controller("ReviewController", function() {
 	}
 });
 
+app.controller("AddImageController", function() {
+	this.show = false;
+	this.addedImage = {};
+	this.showForm = function() {
+		this.show = !this.show;
+	}
+	// this.addImage = function(mural) {
+	// 	console.log("addImage triggered");
+	// 	mural.push(this.addedImage);
+	// }
+});
+
 var muralList = [{
 		name: "Eye of the Tiger",
 		artist: "Nychos",

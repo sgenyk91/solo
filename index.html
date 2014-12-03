@@ -7,9 +7,11 @@
     <link type="text/css" rel="stylesheet" href="styles.css"/>
   </head>
   <body ng-app="main">
+
     <div class="row">
       <header class="col-md-4" align="middle"><h1>San Francisco Murals</h1></header>
     </div>
+
     <div ng-controller="MuralController as muralCtrl">
       <div ng-controller="ImageController as imagesCtrl">
         <div class="container-fluid">
@@ -22,7 +24,19 @@
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(4)" ng-src="{{muralCtrl.mural[4].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(5)" ng-src="{{muralCtrl.mural[5].imageUrl}}">
               <img class="ImageButtons" ng-click="imagesCtrl.selectImage(6)" ng-src="{{muralCtrl.mural[6].imageUrl}}">
+              <img class="ImageButtons" ng-click="imagesCtrl.selectImage(7)" ng-src="{{muralCtrl.mural[7].imageUrl}}">
+              <form name="imageForm" ng-controller="AddImageController as addCtrl" class="form-group" id="addImageButton" ng-submit="addCtrl.addImage()">
+                <button class="btn btn-info" ng-click="addCtrl.showForm()">Add Image <span class="glyphicon glyphicon-collapse-down"></span></button>
+                <div ng-show="addCtrl.show">
+                  <input class="AddImage" placeholder="Name of Mural">
+                  <input class="AddImage" placeholder="Artist Name">
+                  <input class="AddImage" placeholder="Location">
+                  <input class="AddImage" placeholder="Add Image Url">
+                  <button type="submit" class="btn btn-info AddImage">Submit <span class="glyphicon glyphicon-ok"></button>
+                </div>
+              </form>
             </div>
+
             <div class="col-md-8">
               <img class="MuralImages" ng-src="{{muralCtrl.mural[imagesCtrl.image].imageUrl}}">
               <div class="AboutImage">
@@ -31,9 +45,8 @@
                 <div>Location: {{muralCtrl.mural[imagesCtrl.image].location}}</div>
               </div>
             </div>
-            <!-- <div class="col-md-4">
-            </div> -->
           </div>
+
           <div class="row">
             <div class="col-md-3 col-md-offset-4">
               <h4>Reviews</h4>
@@ -45,6 +58,7 @@
                 <div>{{review.comment}}</div>
               </div>
             </div>
+
             <div class="col-md-2">
               <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(muralCtrl.mural[imagesCtrl.image])">
                 <div class="ReviewComments">
@@ -56,7 +70,7 @@
                 </div>
                 <h4>Submit a Review</h4>
                 <fieldset class="form-group">
-                  <input ng-model="reviewCtrl.review.author" class="form-control" placeholder="Name"/>
+                  <input id="nameForm" ng-model="reviewCtrl.review.author" class="form-control" placeholder="Name"/>
                   <select ng-model="reviewCtrl.review.rating" class="form-control" ng-options="stars for stars in [5,4,3,2,1]">
                     <option value>Rating</option>
                   </select>
@@ -67,10 +81,11 @@
                   <textarea ng-model="reviewCtrl.review.comment" class="form-control" placeholder="Product review"></textarea>
                 </fieldset>
                 <fieldset class="form-group">
-                  <input type="submit" value="Submit Review"/>
+                  <input type="submit" class="btn btn-info" value="Submit Review"/>
                 </fieldset>
               </form>
             </div>
+
           </div>
         </div>
       </div>

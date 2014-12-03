@@ -16,10 +16,19 @@ body {
 	cursor: pointer;
 }
 
+#addImageButton {
+	margin-top: 20px;
+}
+
+.AddImage {
+	margin: 5px 10px 5px 10px;
+}
+
 .MuralImages {
 	max-width: 60%;
 	max-height: 60%;
 	float:left;
+	border: 3px solid #82CAFF
 }
 
 .col-md-8 {
@@ -55,3 +64,11 @@ h1, h4 {
 .ReviewComments {
 	font-size: 120%;
 }
+
+#nameForm {
+	margin-bottom: 15px;
+}
+
+/*.btn {
+	color: #82CAFF;
+}*/
